@@ -2,6 +2,7 @@
 import type {} from "@mui/material/themeCssVarsAugmentation";
 import { createTheme, ThemeOptions, alpha } from "@mui/material/styles";
 import { PaletteMode } from "@mui/material";
+import { theme } from "@/theme";
 
 declare module "@mui/material/styles/createPalette" {
  interface ColorRange {
@@ -166,7 +167,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
   },
  },
  typography: {
-  fontFamily: ['"Italiana", "sans-serif"'].join(","),
+  fontFamily: {${italiana.style.fontFamily}` },
   h1: {
    fontSize: customTheme.typography.pxToRem(60),
    fontWeight: 400,
