@@ -167,7 +167,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
   },
  },
  typography: {
-  fontFamily: {${italiana.style.fontFamily}` },
+  fontFamily: `$(theme.typography.fontFamily)`,
   h1: {
    fontSize: customTheme.typography.pxToRem(60),
    fontWeight: 400,

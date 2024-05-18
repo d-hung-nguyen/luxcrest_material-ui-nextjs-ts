@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { useTheme } from "@mui/system";
-import { AlignHorizontalCenter, Margin, Padding } from "@mui/icons-material";
 
 const whiteLogos = [
  "https://logo.clearbit.com/hyatt.com",
@@ -40,7 +39,7 @@ export default function LogoCollection() {
    <Grid container justifyContent="center" sx={{ mt: 0.5, opacity: 0.6 }}>
     {logos.map((logo, index) => (
      <Grid item key={index}>
-      <img src={logo} alt={`Fake company number ${index + 1}`} style={logoStyle} />
+      <img src={logo} alt={`Fake company number ${index + 1}`} className="logo" />
      </Grid>
     ))}
    </Grid>
