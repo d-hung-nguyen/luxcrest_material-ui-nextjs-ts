@@ -98,7 +98,7 @@ export default function Footer() {
       Testimonials
      </Link>
      <Link color="text.secondary" variant="body2" href="#">
-      Highlights
+      Services
      </Link>
      <Link color="text.secondary" variant="body2" href="#">
       Pricing

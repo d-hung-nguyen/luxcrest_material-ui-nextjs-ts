@@ -88,11 +88,7 @@ export default function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
         onClick={() => scrollToSection("testimonials")}>
         About us
        </Button>
-       <Button
-        variant="text"
-        color="info"
-        size="small"
-        onClick={() => scrollToSection("highlights")}>
+       <Button variant="text" color="info" size="small" onClick={() => scrollToSection("services")}>
         services
        </Button>
        <Button variant="text" color="info" size="small" onClick={() => scrollToSection("pricing")}>
@@ -143,7 +139,7 @@ export default function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
         <Divider sx={{ my: 3 }} />
         <MenuItem onClick={() => scrollToSection("features")}>Home</MenuItem>
         <MenuItem onClick={() => scrollToSection("testimonials")}>About us</MenuItem>
-        <MenuItem onClick={() => scrollToSection("highlights")}> Services</MenuItem>
+        <MenuItem onClick={() => scrollToSection("services")}> Services</MenuItem>
         <MenuItem onClick={() => scrollToSection("pricing")}> Team</MenuItem>
         <MenuItem onClick={() => scrollToSection("faq")}> Portfolio</MenuItem>
         <MenuItem></MenuItem>

@@ -43,12 +43,12 @@ export const brand = {
 export const gray = {
  50: "#edf1f5",
  100: "#edf1f5",
- 200: "#edf1f5",
- 300: "#e0e5eb",
+ 200: "#f1ebe8",
+ 300: "#f1ebe8",
  400: "#e0e5eb",
  500: "#2569c3",
- 600: "#2569c3",
- 700: "#072650",
+ 600: "#4a3528",
+ 700: "#4a3528",
  800: "#072650",
  900: "#072650",
 };
@@ -197,28 +197,28 @@ const getDesignTokens = (mode: PaletteMode) => ({
    lineHeight: 1.5,
   },
   h5: {
-   fontSize: customTheme.typography.pxToRem(22),
+   fontSize: customTheme.typography.pxToRem(20),
    fontWeight: 400,
   },
   h6: {
-   fontSize: customTheme.typography.pxToRem(20),
+   fontSize: customTheme.typography.pxToRem(16),
   },
   subtitle1: {
-   fontSize: customTheme.typography.pxToRem(20),
+   fontSize: customTheme.typography.pxToRem(68),
   },
   subtitle2: {
-   fontSize: customTheme.typography.pxToRem(18),
+   fontSize: customTheme.typography.pxToRem(14),
   },
   body1: {
-   fontSize: customTheme.typography.pxToRem(18),
+   fontSize: customTheme.typography.pxToRem(14),
    fontWeight: 400,
   },
   body2: {
-   fontSize: customTheme.typography.pxToRem(20),
+   fontSize: customTheme.typography.pxToRem(16),
    fontWeight: 400,
   },
   caption: {
-   fontSize: customTheme.typography.pxToRem(18),
+   fontSize: customTheme.typography.pxToRem(14),
    fontWeight: 400,
   },
  },

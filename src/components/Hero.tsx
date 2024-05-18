@@ -62,25 +62,24 @@ export default function Hero() {
     }}>
     <StyledBox id="image" />
     <Stack spacing={2} alignItems="center" useFlexGap sx={{ width: { xs: "100%", sm: "70%" } }}>
+     <Typography variant="h6">Lifestyle and hospitality</Typography>
      <Typography
-      variant="h1"
+      component="span"
+      variant="h3"
       sx={{
-       display: "flex",
-       flexDirection: { xs: "column", sm: "column" },
+       fontSize: "inherit",
 
-       fontSize: "clamp(3rem, 10vw, 3.5rem)",
+       color: "inherit ",
       }}>
-      <Typography variant="h6">Lifestyle and hospitality</Typography>
-      Establish a strong foothold in
       <Typography
-       component="span"
-       variant="h1"
+       variant="h3"
        sx={{
-        fontSize: "inherit",
+        display: "flex",
+        flexDirection: { xs: "column", sm: "column" },
 
-        color: "inherit ",
+        fontSize: "clamp(2rem, 10vw, 2.5rem)",
        }}>
-       Central Europe
+       Establish a strong foothold in Central Europe
       </Typography>
      </Typography>
      <Typography textAlign="left" color="text.secondary" sx={{ width: { sm: "100%", md: "100%" } }}>

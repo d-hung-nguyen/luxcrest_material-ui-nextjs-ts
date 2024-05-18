@@ -6,9 +6,9 @@ import { useTheme } from "@mui/system";
 import Image from "next/image";
 import { grey } from "@mui/material/colors";
 
-const whiteLogos = ["/lc1.svg", "/lc3.svg", "/lc4.svg", "/lc5.svg", "/lc6.svg"];
+const whiteLogos = ["/lc1.svg", "/lc3.svg", "/lc4.svg", "/lc6.svg"];
 
-const darkLogos = ["/lc1.svg", "/lc3.svg", "/lc4.svg", "/lc5.svg", "/lc6.svg"];
+const darkLogos = ["/lc1.svg", "/lc3.svg", "/lc4.svg", "/lc6.svg"];
 const logoStyle = {
  margin: "auto",
  display: "flex",
