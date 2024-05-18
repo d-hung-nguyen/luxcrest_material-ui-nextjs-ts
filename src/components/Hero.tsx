@@ -53,11 +53,14 @@ export default function Hero() {
     sx={{
      display: "flex",
      flexDirection: { xs: "column", sm: "row" },
-     alignItems: "flex-start",
-     gap: { xs: 0, sm: 8 },
+     alignItems: "center",
+     justifyContent: "gap between",
+     gap: { xs: 4, sm: 8 },
+
      pt: { xs: 14, sm: 20 },
      pb: { xs: 8, sm: 12 },
     }}>
+    <StyledBox id="image" />
     <Stack spacing={2} alignItems="center" useFlexGap sx={{ width: { xs: "100%", sm: "70%" } }}>
      <Typography
       variant="h1"
@@ -67,6 +70,7 @@ export default function Hero() {
 
        fontSize: "clamp(3rem, 10vw, 3.5rem)",
       }}>
+      <Typography variant="h6">Lifestyle and hospitality</Typography>
       Establish a strong foothold in
       <Typography
        component="span"
@@ -74,7 +78,7 @@ export default function Hero() {
        sx={{
         fontSize: "inherit",
 
-        color: (theme) => (theme.palette.mode === "light" ? "primary.main" : "primary.light"),
+        color: "inherit ",
        }}>
        Central Europe
       </Typography>
@@ -89,7 +93,6 @@ export default function Hero() {
       Get in touch
      </Button>
     </Stack>
-    <StyledBox id="image" />
    </Container>
   </Box>
  );

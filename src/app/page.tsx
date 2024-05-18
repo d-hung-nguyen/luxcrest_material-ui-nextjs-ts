@@ -18,6 +18,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import getLPTheme from "@/getLPTheme";
+import Services from "@/components/Services";
 
 interface ToggleCustomThemeProps {
  showCustomTheme: Boolean;
@@ -82,9 +83,7 @@ export default function LandingPage() {
     <Divider />
     <Testimonials />
     <Divider />
-    <Highlights />
-    <Divider />
-    <Pricing />
+    <Services />
     <Divider />
     <FAQ />
     <Divider />

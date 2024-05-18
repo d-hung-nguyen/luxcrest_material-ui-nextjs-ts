@@ -2,7 +2,11 @@
 import type {} from "@mui/material/themeCssVarsAugmentation";
 import { createTheme, ThemeOptions, alpha } from "@mui/material/styles";
 import { PaletteMode } from "@mui/material";
-import { theme } from "@/theme";
+import { Italiana, Italianno } from "next/font/google";
+
+const italiana = Italiana({ subsets: ["latin"], weight: "400", display: "swap" });
+
+const italianno = Italianno({ subsets: ["latin"], weight: "400", display: "swap" });
 
 declare module "@mui/material/styles/createPalette" {
  interface ColorRange {
@@ -24,29 +28,29 @@ declare module "@mui/material/styles/createPalette" {
 const customTheme = createTheme();
 
 export const brand = {
- 50: "hsl(210, 100%, 97%)",
- 100: "hsl(210, 100%, 90%)",
- 200: "hsl(210, 100%, 80%)",
- 300: "hsl(210, 100%, 65%)",
- 400: "hsl(210, 98%, 48%)",
- 500: "hsl(210, 98%, 42%)",
- 600: "hsl(210, 98%, 55%)",
- 700: "hsl(210, 100%, 35%)",
- 800: "hsl(210, 100%, 16%)",
- 900: "hsl(210, 100%, 21%)",
+ 50: "#f1ebe8",
+ 100: "#f1ebe8",
+ 200: "#f1ebe8",
+ 300: "#4a3528",
+ 400: "#4a3528",
+ 500: "#4a3528",
+ 600: "#4a3528",
+ 700: "#412c1f",
+ 800: "#412c1f",
+ 900: "#412c1f",
 };
 
 export const gray = {
- 50: "hsl(220, 60%, 99%)",
- 100: "hsl(220, 35%, 94%)",
- 200: "hsl(220, 35%, 88%)",
- 300: "hsl(220, 25%, 80%)",
- 400: "hsl(220, 20%, 65%)",
- 500: "hsl(220, 20%, 42%)",
- 600: "hsl(220, 25%, 35%)",
- 700: "hsl(220, 25%, 25%)",
- 800: "hsl(220, 25%, 10%)",
- 900: "hsl(220, 30%, 5%)",
+ 50: "#edf1f5",
+ 100: "#edf1f5",
+ 200: "#edf1f5",
+ 300: "#e0e5eb",
+ 400: "#e0e5eb",
+ 500: "#2569c3",
+ 600: "#2569c3",
+ 700: "#072650",
+ 800: "#072650",
+ 900: "#072650",
 };
 
 export const green = {
@@ -92,15 +96,15 @@ const getDesignTokens = (mode: PaletteMode) => ({
  palette: {
   mode,
   primary: {
-   light: brand[200],
-   main: brand[500],
-   dark: brand[800],
-   contrastText: brand[50],
+   light: "#2569c3",
+   main: "#1556ac",
+   dark: "#072650",
+   contrastText: "#5e4536",
    ...(mode === "dark" && {
-    contrastText: brand[50],
-    light: brand[300],
-    main: brand[400],
-    dark: brand[800],
+    contrastText: "#5e4536",
+    light: "#f1ebe8",
+    main: "#5e4536",
+    dark: "#072650",
    }),
   },
   info: {
@@ -155,8 +159,8 @@ const getDesignTokens = (mode: PaletteMode) => ({
    ...(mode === "dark" && { default: "hsl(220, 30%, 3%)", paper: gray[900] }),
   },
   text: {
-   primary: gray[800],
-   secondary: gray[600],
+   primary: "#5e4536",
+   secondary: "#072650",
    ...(mode === "dark" && { primary: "hsl(0, 0%, 100%)", secondary: gray[400] }),
   },
   action: {
@@ -167,9 +171,12 @@ const getDesignTokens = (mode: PaletteMode) => ({
   },
  },
  typography: {
-  fontFamily: `$(theme.typography.fontFamily)`,
+  fontFamily: "Prata, sans-serif",
+  fontOpticalSizing: "auto",
+  fontStyle: "normal",
   h1: {
    fontSize: customTheme.typography.pxToRem(60),
+
    fontWeight: 400,
    lineHeight: 1.2,
    letterSpacing: -0.5,
@@ -190,33 +197,33 @@ const getDesignTokens = (mode: PaletteMode) => ({
    lineHeight: 1.5,
   },
   h5: {
-   fontSize: customTheme.typography.pxToRem(20),
+   fontSize: customTheme.typography.pxToRem(22),
    fontWeight: 400,
   },
   h6: {
-   fontSize: customTheme.typography.pxToRem(18),
+   fontSize: customTheme.typography.pxToRem(20),
   },
   subtitle1: {
-   fontSize: customTheme.typography.pxToRem(18),
+   fontSize: customTheme.typography.pxToRem(20),
   },
   subtitle2: {
-   fontSize: customTheme.typography.pxToRem(16),
+   fontSize: customTheme.typography.pxToRem(18),
   },
   body1: {
-   fontSize: customTheme.typography.pxToRem(15),
+   fontSize: customTheme.typography.pxToRem(18),
    fontWeight: 400,
   },
   body2: {
-   fontSize: customTheme.typography.pxToRem(14),
+   fontSize: customTheme.typography.pxToRem(20),
    fontWeight: 400,
   },
   caption: {
-   fontSize: customTheme.typography.pxToRem(12),
+   fontSize: customTheme.typography.pxToRem(18),
    fontWeight: 400,
   },
  },
  shape: {
-  borderRadius: 12,
+  borderRadius: 8,
  },
 });
 

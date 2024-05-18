@@ -3,28 +3,23 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { useTheme } from "@mui/system";
+import Image from "next/image";
+import { grey } from "@mui/material/colors";
 
-const whiteLogos = [
- "https://logo.clearbit.com/hyatt.com",
- "https://logo.clearbit.com/kerzner.com",
- "https://logo.clearbit.com/velaaprivateisland.com",
- "https://logo.clearbit.com/so-hotels.com",
-];
+const whiteLogos = ["/lc1.svg", "/lc3.svg", "/lc4.svg", "/lc5.svg", "/lc6.svg"];
 
-const darkLogos = [
- "https://logo.clearbit.com/hyatt.com  ",
- "https://logo.clearbit.com/kerzner.com",
- "https://logo.clearbit.com/velaaprivateisland.com",
- "https://logo.clearbit.com/so-hotels.com",
-];
-
+const darkLogos = ["/lc1.svg", "/lc3.svg", "/lc4.svg", "/lc5.svg", "/lc6.svg"];
 const logoStyle = {
- width: "auto",
- height: "30 px",
- padding: "30px",
- filter: "grayscale(1)",
- opacity: 0.8,
- alignSelf: "center",
+ margin: "auto",
+ display: "flex",
+ justifyContent: "center",
+ alignItems: "center",
+ width: "50px",
+ height: "50px",
+ opacity: 0.9,
+ borderRadius: "50%",
+ transition: "opacity 0.3s ease",
+ greyscale: "1",
 };
 
 export default function LogoCollection() {
@@ -34,12 +29,12 @@ export default function LogoCollection() {
  return (
   <Box id="logoCollection" sx={{ py: 4 }}>
    <Typography component="p" variant="subtitle2" align="center" color="text.secondary">
-    Trusted by the best companies
+    Trusted by partner hotels and resorts
    </Typography>
-   <Grid container justifyContent="center" sx={{ mt: 0.5, opacity: 0.6 }}>
+   <Grid container justifyContent="center" sx={{ mt: 4 }}>
     {logos.map((logo, index) => (
-     <Grid item key={index}>
-      <img src={logo} alt={`Fake company number ${index + 1}`} className="logo" />
+     <Grid item key={index} style={logoStyle}>
+      <Image src={logo} alt={`logo Collection ${index + 1}`} width={70} height={70} />
      </Grid>
     ))}
    </Grid>
