@@ -57,11 +57,10 @@ export default function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
       alignItems: "center",
       justifyContent: "space-between",
       flexShrink: 0,
-      borderRadius: "999px",
-      bgcolor:
-       theme.palette.mode === "light" ? "hsla(220, 60%, 99%, 0.6)" : "hsla(220, 0%, 0%, 0.7)",
+      borderRadius: 1,
+      bgcolor: theme.palette.mode === "light" ? "#fffffe" : "hsla(220, 0%, 0%, 0.7)",
       backdropFilter: "blur(24px)",
-      maxHeight: 40,
+      maxHeight: 50,
       border: "1px solid",
       borderColor: "divider",
       boxShadow:
@@ -74,40 +73,33 @@ export default function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
        flexGrow: 1,
        display: "flex",
        alignItems: "center",
-       px: 0,
+       justifyContent: "space-between",
+       px: 0.5,
       }}>
-      <Image src="/logo.png" width={100} height={100} priority={true} alt="Luxcrest logo" />
+      <Button variant="text" size="small" color="info" onClick={() => scrollToSection("hero")}>
+       <Image src="/logo.png" width={100} height={100} priority={true} alt="Luxcrest logo" />
+      </Button>
+
       <Box sx={{ display: { xs: "none", md: "flex" } }}>
-       <Button variant="text" color="info" size="small" onClick={() => scrollToSection("features")}>
-        Home
-       </Button>
-       <Button
-        variant="text"
-        color="info"
-        size="small"
-        onClick={() => scrollToSection("testimonials")}>
+       <Button variant="text" color="info" size="small" onClick={() => scrollToSection("About us")}>
         About us
        </Button>
        <Button variant="text" color="info" size="small" onClick={() => scrollToSection("services")}>
-        services
-       </Button>
-       <Button variant="text" color="info" size="small" onClick={() => scrollToSection("pricing")}>
-        team
+        Services
        </Button>
        <Button
         variant="text"
         color="info"
         size="small"
-        onClick={() => scrollToSection("faq")}
-        sx={{ minWidth: 0 }}>
-        Porfolio
+        onClick={() => scrollToSection("portfolio")}>
+        Portfolio
        </Button>
       </Box>
      </Box>
      <Box
       sx={{
        display: { xs: "none", md: "flex" },
-       gap: 0.5,
+       gap: 2,
        alignItems: "center",
       }}>
       <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
@@ -137,12 +129,10 @@ export default function AppAppBar({ mode, toggleColorMode }: AppAppBarProps) {
          </IconButton>
         </Box>
         <Divider sx={{ my: 3 }} />
-        <MenuItem onClick={() => scrollToSection("features")}>Home</MenuItem>
-        <MenuItem onClick={() => scrollToSection("testimonials")}>About us</MenuItem>
-        <MenuItem onClick={() => scrollToSection("services")}> Services</MenuItem>
-        <MenuItem onClick={() => scrollToSection("pricing")}> Team</MenuItem>
-        <MenuItem onClick={() => scrollToSection("faq")}> Portfolio</MenuItem>
-        <MenuItem></MenuItem>
+        <MenuItem onClick={() => scrollToSection("features")}>About us</MenuItem>
+        <MenuItem onClick={() => scrollToSection("testimonials")}> Services</MenuItem>
+        <MenuItem onClick={() => scrollToSection("services")}> Portfolio</MenuItem>
+
         <MenuItem>
          <Button color="primary" variant="outlined" fullWidth>
           Get in touch
